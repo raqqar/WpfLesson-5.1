@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfLesson_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLesson_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Row="0" Grid.ColumnSpan="2" Width="Auto"/>
+        <InkCanvas Grid.Row="2" />
+        <Slider x:Name="BrushRadiusSlider" Minimum="1" Maximum="100" Value="1" />
+        <ToolBarTray Grid.Row="1" Width="Auto">
+            <ToolBar>
+                <ComboBox Margin="5" Padding="5"  SelectedIndex="0" Width="Auto" >
+                    <TextBlock Text="       " Background="Red" />
+                    <TextBlock Text="       " Background="Blue"/>
+                    <TextBlock Text="       " Background="Green"/>
+                    <TextBlock Text="       " Background="Black"/>
+                    <TextBlock Text="       " Background="White"/>
+
+                </ComboBox>
+                
+
+
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+                <Button >
+                    <Image Source="Source\eras.png"  Width="20" Height="20" />
+                </Button>
+                <Separator/>
+                <Button  >
+                    <Image Source="Source\pero.png" Width="20" Height="20" />
+                </Button>
+                <Separator/>
+            </ToolBar>
+        </ToolBarTray>
+        <Menu VerticalContentAlignment="Top">
+            <MenuItem Header="_Файл">
+                <MenuItem Header="_Открыть" />
+                <MenuItem Header="_Сохранить" />
+                <Separator/>
+                <MenuItem Header="_Закрыть" />
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
